@@ -1,31 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { RegistrarComponent } from './components/registrar/registrar.component';
-import { InicioComponent } from './components/inicio/inicio.component';
+import { HomeComponent } from './components/modulos/home/home.component';
+
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full',
-  }, // Redirige a login cuando la ruta está vacía
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
-    path: 'registrar',
-    component: RegistrarComponent,
-  }, // Ruta para LoginComponent
-  {
-    path: 'inicio',
-    component: InicioComponent,
-  }, // Ruta para InicioComponent
-  {
-    path: '**',
-    redirectTo: 'login',
-  },
+  // Redirige a login por defecto
+  { path: 'login', component: LoginComponent },
+  {path: 'home', component: HomeComponent}, // Ruta para el login
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Aquí puedes agregar más rutas para otros componentes
 ];
 
 @NgModule({
