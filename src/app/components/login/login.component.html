@@ -1,0 +1,29 @@
+<div class="container">
+  <header class="header">
+    <img src="app/assets/img/logo.png" alt="Open Work Logo" class="logo">
+    <h1>OPEN WORK</h1>
+  </header>
+
+  <div class="form-container">
+    <div class="tabs">
+      <button id="loginTab" class="active">Login</button>
+      <button id="signupTab" [routerLink]="['/registrar']">Sign Up</button>
+    </div>
+
+    <h2>Bienvenido a Open Work!</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Correo Electrónico" name="email">
+      <input type="password" id="password" placeholder="Contraseña" name="password">
+      <button type="button" onclick="onLogin()">Log in</button>
+      <a href="/inicio">inicio</a>
+    </form>
+    <p>¿No tienes una cuenta? <a href="/registrar" onclick="redirectToSignup()">Regístrate</a></p>
+  </div>
+</div>
+
+<div id="modal" class="modal"
+  style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+  <div class="modal-content">
+    <p id="modalMessage"></p>
+  </div>
+</div>

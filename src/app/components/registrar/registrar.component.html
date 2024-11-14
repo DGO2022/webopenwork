@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="./registrar.component.css">
+
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="../../../assets/images/logo.png" alt="Open Work Logo" class="logo">
+      <h1>OPEN WORK</h1>
+    </header>
+
+    <div class="form-container">
+      <div class="tabs">
+        <button id="loginTab" [routerLink]="['/Login']">Login</button>
+        <button id="signupTab" class="active">Sign Up</button>
+      </div>
+
+      <h2>Registro</h2>
+      <form (ngSubmit)="crear()">
+        <div class="profile-pic">
+          <img src="usuario.png" alt="User Icon">
+        </div>
+
+        <div class="input-group">
+          <label for="dob">Fecha de Nacimiento</label>
+          <input type="date" id="dob" [(ngModel)]="usuario.fechanaci" name="fechanaci" placeholder="DD/MM/YYYY"
+            required>
+        </div>
+
+        <div class="input-group">
+          <label for="cvUpload">Subir CV</label>
+          <input type="file" id="cvUpload" (change)="onFileSelected($event)">
+        </div>
+
+        <div class="input-group">
+          <label for="firstName">Nombre</label>
+          <input type="text" id="firstName" [(ngModel)]="usuario.nombre" name="nombre" placeholder="Nombre" required>
+        </div>
+
+        <div class="input-group">
+          <label for="lastName">Apellido</label>
+          <input type="text" id="lastName" [(ngModel)]="usuario.apellido" name="apellido" placeholder="Apellido"
+            required>
+        </div>
+
+        <div class="input-group">
+          <label for="signupEmail">Correo Electrónico</label>
+          <input type="email" id="signupEmail" [(ngModel)]="usuario.correo" name="correo"
+            placeholder="Correo Electrónico" required>
+        </div>
+
+        <div class="input-group">
+          <label for="signupPassword">Contraseña</label>
+          <input type="password" id="signupPassword" [(ngModel)]="usuario.contrasena" name="contraseña"
+            placeholder="Contraseña" required>
+        </div>
+
+        <button type="submit" id="signupButton">Sign Up</button>
+      </form>
+
+      <p>¿Olvidaste tu contraseña?</p>
+    </div>
+  </div>
+</body>

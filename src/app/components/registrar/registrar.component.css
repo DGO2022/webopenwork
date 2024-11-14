@@ -1,0 +1,156 @@
+
+/* Estilo global para el formulario */
+body,
+h1,
+h2,
+input,
+button,
+p,
+label {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+}
+
+.logo {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.tabs button {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #d3d3d3;
+  color: #333;
+}
+
+.tabs button.active {
+  background-color: #e33d3d;
+  color: #fff;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic img {
+  width: 60%;
+  height: 60%;
+}
+
+/* Estilos para los campos del formulario */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-group input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="file"],
+input[type="text"],
+input[type="date"] {
+  /* Aquí incluimos el campo de fecha */
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo para el campo de fecha */
+input[type="date"]:focus {
+  border-color: #4CAF50;
+  /* Color verde al enfocar */
+  outline: none;
+}
+
+/* Botón de submit */
+button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #e33d3d, #a44d5f);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #a44d5f, #e33d3d);
+}
+
+p {
+  margin-top: 15px;
+  color: #555;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Personalización del input de fecha */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  color: #e33d3d;
+  /* Color de la flecha */
+}
